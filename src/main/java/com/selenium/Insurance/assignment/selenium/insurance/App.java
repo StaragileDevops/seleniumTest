@@ -24,16 +24,16 @@ public class App
     @SuppressWarnings({ "deprecation" })
 	public static void main( String[] args ) 
     {
-        //System.setProperty("webdriver.chrome.driver", "C:\\Users\\HP\\Downloads\\chromedriver.exe");
-        System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
+        System.setProperty("webdriver.chrome.driver", "C:\\Users\\HP\\Downloads\\chromedriver.exe");
+        //System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
         ChromeOptions chromeOptions = new ChromeOptions();
-        //chromeOptions.setBinary("C:\\Program Files\\BraveSoftware\\Brave-Browser\\Application\\brave.exe");
+        chromeOptions.setBinary("C:\\Program Files\\BraveSoftware\\Brave-Browser\\Application\\brave.exe");
         
         WebDriver driver = new ChromeDriver(chromeOptions);
-        chromeOptions.addArguments("--headless");
-        chromeOptions.addArguments("--no-sandbox");
-        chromeOptions.addArguments("--disable-dev-shm-usage");
-        chromeOptions.addArguments("disable-infobars"); 
+        //chromeOptions.addArguments("--headless");
+        //chromeOptions.addArguments("--no-sandbox");
+        //chromeOptions.addArguments("--disable-dev-shm-usage");
+        //chromeOptions.addArguments("disable-infobars"); 
         chromeOptions.addArguments("--disable-extensions");
         
         driver.get("http://18.181.221.195:8081/contactus.html");
