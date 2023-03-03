@@ -33,8 +33,8 @@ public class App
         chromeOptions.addArguments("--headless");
         chromeOptions.addArguments("--no-sandbox");
         chromeOptions.addArguments("--disable-dev-shm-usage");
-        chromeOptions.addArguments("disable-infobars"); 
-        chromeOptions.addArguments("--disable-extensions");
+        //chromeOptions.addArguments("disable-infobars"); 
+        //chromeOptions.addArguments("--disable-extensions");
         
         driver.get("http://18.181.221.195:8081/contactus.html");
         System.out.println("Opened the website");
