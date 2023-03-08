@@ -36,7 +36,7 @@ public class App
         //chromeOptions.addArguments("disable-infobars"); 
         //chromeOptions.addArguments("--disable-extensions");
         
-        driver.get("http://18.181.221.195:8081/contactus.html");
+        driver.get("http://54.249.86.231:8083/contactus.html");
         System.out.println("Opened the website");
         driver.manage().timeouts().implicitlyWait(5,TimeUnit.SECONDS);
         
