@@ -24,8 +24,7 @@ public class App
     {
         //System.setProperty("webdriver.chrome.driver", "C:\\Users\\HP\\Downloads\\chromedriver.exe");
         System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
-	System.setProperty("webdriver.http.factory", "jdk-http-client");
-        ChromeOptions chromeOptions = new ChromeOptions();
+	ChromeOptions chromeOptions = new ChromeOptions();
         //chromeOptions.setBinary("C:\\Program Files\\BraveSoftware\\Brave-Browser\\Application\\brave.exe");
         
         WebDriver driver = new ChromeDriver(chromeOptions);
@@ -43,7 +42,7 @@ public class App
         //chromeOptions.merge(cp);
         //driver = new ChromeDriver(chromeOptions);
         
-        driver.get("http://54.249.86.231:8083/contactus.html");
+        driver.get("http://3.113.16.241:8081/contactus.html");
         System.out.println("Opened the website");
         driver.manage().timeouts().implicitlyWait(5,TimeUnit.SECONDS);
         
