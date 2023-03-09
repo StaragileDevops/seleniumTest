@@ -34,7 +34,7 @@ public class App
         chromeOptions.addArguments("--no-sandbox");
 	chromeOptions.addArguments("--headless");
         
-        chromeOptions.addArguments("--disable-dev-shm-usage");
+        //chromeOptions.addArguments("--disable-dev-shm-usage");
         //chromeOptions.addArguments("disable-infobars"); 
         //chromeOptions.addArguments("--disable-extensions");
         chromeOptions.addArguments("--remote-allow-origins=*");
