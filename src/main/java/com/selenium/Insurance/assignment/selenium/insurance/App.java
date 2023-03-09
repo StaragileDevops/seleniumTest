@@ -33,14 +33,14 @@ public class App
         chromeOptions.addArguments("--headless");
         chromeOptions.addArguments("--no-sandbox");
         chromeOptions.addArguments("--disable-dev-shm-usage");
-        chromeOptions.addArguments("disable-infobars"); 
-        chromeOptions.addArguments("--disable-extensions");
-        chromeOptions.addArguments("--remote-allow-origins=*");
-        chromeOptions.addArguments("--disable notifications");
-        DesiredCapabilities cp = new DesiredCapabilities();
-        cp.setCapability(ChromeOptions.CAPABILITY, chromeOptions);
-        chromeOptions.merge(cp);
-        driver = new ChromeDriver(chromeOptions);
+        //chromeOptions.addArguments("disable-infobars"); 
+        //chromeOptions.addArguments("--disable-extensions");
+       // chromeOptions.addArguments("--remote-allow-origins=*");
+        //chromeOptions.addArguments("--disable notifications");
+        //DesiredCapabilities cp = new DesiredCapabilities();
+        //cp.setCapability(ChromeOptions.CAPABILITY, chromeOptions);
+        //chromeOptions.merge(cp);
+        //driver = new ChromeDriver(chromeOptions);
         
         driver.get("http://54.249.86.231:8083/contactus.html");
         System.out.println("Opened the website");
