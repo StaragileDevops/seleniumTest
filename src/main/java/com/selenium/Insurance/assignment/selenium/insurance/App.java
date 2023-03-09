@@ -24,27 +24,27 @@ public class App
     {
         //System.setProperty("webdriver.chrome.driver", "C:\\Users\\HP\\Downloads\\chromedriver.exe");
         System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
-	//chromeOptions.setBinary("/home/ubuntu/chromium-browser");
-	ChromeOptions chromeOptions = new ChromeOptions();
+        System.setProperty("webdriver.http.factory", "jdk-http-client");
+        
+        ChromeOptions chromeOptions = new ChromeOptions();
+        //chromeOptions.setBinary("/usr/bin/chromium-browser");
         //chromeOptions.setBinary("C:\\Program Files\\BraveSoftware\\Brave-Browser\\Application\\brave.exe");
         
         WebDriver driver = new ChromeDriver(chromeOptions);
         driver.manage().timeouts().implicitlyWait(5,TimeUnit.SECONDS);
         driver.manage().timeouts().pageLoadTimeout(100, TimeUnit.SECONDS);
-        //chromeOptions.addArguments("--no-sandbox");
-		
 	chromeOptions.addArguments("--remote-allow-origins=*");
-	chromeOptions.addArguments("--headless");
-        
-        //chromeOptions.addArguments("--disable-dev-shm-usage");
+        chromeOptions.addArguments("--headless");
+        chromeOptions.addArguments("--no-sandbox");
+        chromeOptions.addArguments("--disable-dev-shm-usage");
         //chromeOptions.addArguments("disable-infobars"); 
         //chromeOptions.addArguments("--disable-extensions");
         
-        //chromeOptions.addArguments("--disable notifications");
-        //DesiredCapabilities cp = new DesiredCapabilities();
-        //cp.setCapability(ChromeOptions.CAPABILITY, chromeOptions);
-        //chromeOptions.merge(cp);
-        //driver = new ChromeDriver(chromeOptions);
+        chromeOptions.addArguments("--disable notifications");
+        DesiredCapabilities cp = new DesiredCapabilities();
+        cp.setCapability(ChromeOptions.CAPABILITY, chromeOptions);
+        chromeOptions.merge(cp);
+        driver = new ChromeDriver(chromeOptions);
         
         driver.get("http://3.113.16.241:8081/contactus.html");
         System.out.println("Opened the website");
