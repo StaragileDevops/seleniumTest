@@ -48,6 +48,10 @@
     <artifactId>commons-io</artifactId>
     <version>2.11.0</version>
 </dependency>
+	   <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-http-jdk-client</artifactId>
+        </dependency>
 <!-- https://mvnrepository.com/artifact/org.codehaus.mojo/exec-maven-plugin -->
  
 <dependency>
