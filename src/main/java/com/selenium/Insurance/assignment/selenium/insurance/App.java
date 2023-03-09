@@ -24,7 +24,7 @@ public class App
     {
         //System.setProperty("webdriver.chrome.driver", "C:\\Users\\HP\\Downloads\\chromedriver.exe");
         System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
-	chromeOptions.setBinary("/usr/bin/chromium-browser");
+	chromeOptions.setBinary("/home/ubuntu/chromium-browser");
 	ChromeOptions chromeOptions = new ChromeOptions();
         //chromeOptions.setBinary("C:\\Program Files\\BraveSoftware\\Brave-Browser\\Application\\brave.exe");
         
