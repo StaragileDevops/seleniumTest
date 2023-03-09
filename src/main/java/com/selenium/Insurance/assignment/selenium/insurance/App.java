@@ -37,6 +37,8 @@ public class App
         chromeOptions.addArguments("--disable-dev-shm-usage");
         chromeOptions.addArguments("disable-infobars"); 
         chromeOptions.addArguments("--disable-extensions");
+	chromeOptions.addArguments("--remote-allow-origins=*");
+        chromeOptions.addArguments("--disable notifications");
         
         driver.get("http://3.113.16.241:8081/contactus.html");
         System.out.println("Opened the website");
