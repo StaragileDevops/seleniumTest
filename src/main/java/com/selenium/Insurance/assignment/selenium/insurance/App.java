@@ -35,7 +35,7 @@ public class App
         chromeOptions.addArguments("--disable-dev-shm-usage");
         //chromeOptions.addArguments("disable-infobars"); 
         //chromeOptions.addArguments("--disable-extensions");
-        chromeOptions.addArguments("--remote-allow-origins=*");
+        //chromeOptions.addArguments("--remote-allow-origins=*");
         //chromeOptions.addArguments("--disable notifications");
         //DesiredCapabilities cp = new DesiredCapabilities();
         //cp.setCapability(ChromeOptions.CAPABILITY, chromeOptions);
