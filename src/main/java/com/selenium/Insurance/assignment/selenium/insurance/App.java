@@ -31,13 +31,15 @@ public class App
         WebDriver driver = new ChromeDriver(chromeOptions);
         driver.manage().timeouts().implicitlyWait(5,TimeUnit.SECONDS);
         driver.manage().timeouts().pageLoadTimeout(100, TimeUnit.SECONDS);
-        chromeOptions.addArguments("--no-sandbox");
+        //chromeOptions.addArguments("--no-sandbox");
+		
+	chromeOptions.addArguments("--remote-allow-origins=*");
 	chromeOptions.addArguments("--headless");
         
         //chromeOptions.addArguments("--disable-dev-shm-usage");
         //chromeOptions.addArguments("disable-infobars"); 
         //chromeOptions.addArguments("--disable-extensions");
-        chromeOptions.addArguments("--remote-allow-origins=*");
+        
         //chromeOptions.addArguments("--disable notifications");
         //DesiredCapabilities cp = new DesiredCapabilities();
         //cp.setCapability(ChromeOptions.CAPABILITY, chromeOptions);
