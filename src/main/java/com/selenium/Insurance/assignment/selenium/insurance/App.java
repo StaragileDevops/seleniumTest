@@ -68,7 +68,7 @@ public class App
         
         //To take the screenshot
         
-        TakesScreenshot scrShot = ((TakesScreenshot)driver);
+       /* TakesScreenshot scrShot = ((TakesScreenshot)driver);
         
         
         
@@ -87,7 +87,7 @@ public class App
 			e.printStackTrace();
 		}
         
-        /*WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
         if(wait.until(ExpectedConditions.alertIsPresent())==null)
             System.out.println("alert was not present");
         else
