@@ -2,7 +2,6 @@ package com.selenium.Insurance.assignment.selenium.insurance;
 
 import java.io.File;
 import java.io.IOException;
-import java.time.Duration;
 import java.util.concurrent.TimeUnit;
 
 import org.apache.commons.io.FileUtils;
@@ -12,8 +11,7 @@ import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
+import org.openqa.selenium.remote.DesiredCapabilities;
 
 /**
  * Hello world!
@@ -30,17 +28,21 @@ public class App
         //chromeOptions.setBinary("C:\\Program Files\\BraveSoftware\\Brave-Browser\\Application\\brave.exe");
         
         WebDriver driver = new ChromeDriver(chromeOptions);
-	driver.manage().timeouts().implicitlyWait(5,TimeUnit.SECONDS);
-	driver.manage().timeouts().pageLoadTimeout(5, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(5,TimeUnit.SECONDS);
+        driver.manage().timeouts().pageLoadTimeout(5, TimeUnit.SECONDS);
         chromeOptions.addArguments("--headless");
         chromeOptions.addArguments("--no-sandbox");
         chromeOptions.addArguments("--disable-dev-shm-usage");
-        chromeOptions.addArguments("disable-infobars"); 
-        chromeOptions.addArguments("--disable-extensions");
-	chromeOptions.addArguments("--remote-allow-origins=*");
+        //chromeOptions.addArguments("disable-infobars"); 
+        //chromeOptions.addArguments("--disable-extensions");
+        chromeOptions.addArguments("--remote-allow-origins=*");
         chromeOptions.addArguments("--disable notifications");
+        DesiredCapabilities cp = new DesiredCapabilities();
+        cp.setCapability(ChromeOptions.CAPABILITY, chromeOptions);
+        chromeOptions.merge(cp);
+        driver = new ChromeDriver(chromeOptions);
         
-        driver.get("http://3.113.16.241:8081/contactus.html");
+        driver.get("http://54.249.86.231:8083/contactus.html");
         System.out.println("Opened the website");
         driver.manage().timeouts().implicitlyWait(5,TimeUnit.SECONDS);
         
@@ -70,7 +72,7 @@ public class App
         
         //To take the screenshot
         
-       /* TakesScreenshot scrShot = ((TakesScreenshot)driver);
+        TakesScreenshot scrShot = ((TakesScreenshot)driver);
         
         
         
@@ -89,7 +91,7 @@ public class App
 			e.printStackTrace();
 		}
         
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
+        /*WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
         if(wait.until(ExpectedConditions.alertIsPresent())==null)
             System.out.println("alert was not present");
         else
