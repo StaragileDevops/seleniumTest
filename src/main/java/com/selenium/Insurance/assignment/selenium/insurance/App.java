@@ -23,7 +23,7 @@ public class App
 	public static void main( String[] args ) 
     {
         //System.setProperty("webdriver.chrome.driver", "C:\\Users\\HP\\Downloads\\chromedriver.exe");
-        System.setProperty("webdriver.chrome.driver", "/chromedriver-linux64");
+        System.setProperty("webdriver.chrome.driver", "/chromedriver-linux64/chromedriver");
         System.setProperty("webdriver.http.factory", "jdk-http-client");
         
         ChromeOptions chromeOptions = new ChromeOptions();
