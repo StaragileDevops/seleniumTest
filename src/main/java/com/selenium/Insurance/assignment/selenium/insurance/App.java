@@ -23,7 +23,7 @@ public class App
 	public static void main( String[] args ) 
     {
         //System.setProperty("webdriver.chrome.driver", "C:\\Users\\HP\\Downloads\\chromedriver.exe");
-        System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
+        System.setProperty("webdriver.chrome.driver", "/chrome-linux64");
         System.setProperty("webdriver.http.factory", "jdk-http-client");
         
         ChromeOptions chromeOptions = new ChromeOptions();
@@ -46,7 +46,7 @@ public class App
         chromeOptions.merge(cp);
         driver = new ChromeDriver(chromeOptions);
         
-        driver.get("http://3.113.16.241:8081/contactus.html");
+        driver.get("http://3.145.137.76:8081/contactus.html");
         System.out.println("Opened the website");
         driver.manage().timeouts().implicitlyWait(5,TimeUnit.SECONDS);
         
